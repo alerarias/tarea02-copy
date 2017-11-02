@@ -30,6 +30,10 @@
         attribution: '<a href="http://www.openstreetmap.org/">OpenStreetMap</a>'
       });
       osm.addTo(mapa);
+      
+      // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
+      var sta = L.tileLayer.provider('Stamen.Watercolor');
+      sta.addTo(mapa);
 	    
       // retorna un color con base en la cantidad de especies
       function color(d) {
@@ -69,7 +73,8 @@
 	    
    	    
       var baseLayers = {
-	"OpenStreetMap": osm
+	"OpenStreetMap": osm,
+	"Stamen Watercolor" : sta
       };
       var overlays = {
 	"Cantones de Costa Rica": cantones2014
