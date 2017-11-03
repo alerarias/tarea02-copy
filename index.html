@@ -36,7 +36,7 @@
       osm.addTo(mapa);
       
       // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
-      var sta = L.tileLayer.provider('Stamen.Watercolor');
+      var sta = L.tileLayer.provider('Stamen.TonerBackground');
       sta.addTo(mapa);
 	
       // Capa OSM Surfer de tipo L.tileLayer definida con el complemento Leaflet-providers
@@ -72,7 +72,7 @@
 	    opacity: 1,
 	    color: 'white',
 	    dashArray: '3',
-	    fillOpacity: 0.3,		  
+	    fillOpacity: 0.5,		  
             fillColor: color(feature.properties.POB_2011_T)
           };
         },
