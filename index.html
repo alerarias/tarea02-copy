@@ -39,11 +39,12 @@
       var sta = L.tileLayer.provider('Stamen.Watercolor');
       sta.addTo(mapa);
       
-var OpenMapSurfer_Roads = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-	maxZoom: 20,
-	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
+      var OpenMapSurfer_Roads = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
-	    osmS.addTo(mapa);
+      osmS.addTo(mapa);
 	    
       // retorna un color con base en la cantidad de especies
       function color(d) {
@@ -85,7 +86,7 @@ var OpenMapSurfer_Roads = L.tileLayer('https://korona.geog.uni-heidelberg.de/til
       var baseLayers = {
 	"OpenStreetMap": osm,
 	"Stamen Watercolor" : sta,
-	"OpenStreetMap Surfer": osmS
+	"OSM Surfer": osmS
       };
       var overlays = {
 	"Cantones de Costa Rica": cantones2014
